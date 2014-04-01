@@ -9,7 +9,7 @@ class Dispatch {
     private $controller = null;
 
     public function __construct() {
-        Dispatch::$appConfig = json_decode(file_get_contents(SYS_ROOT . "app.conf.json"), true);
+        Dispatch::$appConfig = json_decode(file_get_contents(SYS_ROOT . "app.json"), true);
     }
     public function __destruct() {}
 
