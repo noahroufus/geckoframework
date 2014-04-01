@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Gecko\\App\\BaseController' => $baseDir . '/core/library/base_controller.class.php',
+    'Gecko\\App\\Error' => $baseDir . '/apps/guestbook/controllers/error.controller.php',
     'Gecko\\App\\Index' => $baseDir . '/apps/guestbook/controllers/index.controller.php',
     'Gecko\\App\\View' => $baseDir . '/core/library/view.class.php',
     'Gecko\\Core\\Dispatch' => $baseDir . '/core/library/dispatch.class.php',

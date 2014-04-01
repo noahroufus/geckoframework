@@ -1,5 +1,8 @@
 <?php namespace Gecko;
 
+// Enable error
+ini_set("display_errors", "1");
+
 // Global definitions
 define("DS", DIRECTORY_SEPARATOR);
 define("SYS_ROOT", ".." . DS);

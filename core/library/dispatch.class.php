@@ -27,6 +27,10 @@ class Dispatch {
         require_once APP_ROOT . Dispatch::$appConfig["app"] . DS . "routes.php";
     }
 
+    public function setRoute($r) {
+        $this->route = $r;
+    }
+
     public function getRoute() {
         return $this->route;
     }

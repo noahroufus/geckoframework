@@ -22,9 +22,28 @@ class Router {
                 $disp->setController($route[1]);
 
                 $controller = $disp->getController();
-                $controller->{$disp->getAction()}();
+
+                if(method_exists($controller, $disp->getAction())) {
+                    $controller->{$disp->getAction()}();
+                } else {
+                    Router::error();
+                }
+
+                return;
             }
         }
+
+        Router::error();
+    }
+
+    public static function error() {
+        $disp = Router::$dispatch;
+
+        $disp->setRoute("error");
+        $disp->setController(new \Gecko\App\Error);
+        $controller = $disp->getController();
+
+        $controller->home();
     }
 };
 
